@@ -25,9 +25,9 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     CounterEvent event,
   ) async* {
     if (event is CounterIncrement) {
-      yield* _mapIncrementEventToState(event);
+      yield* _mapIncrementEventToState();
     } else if (event is CounterSubduction) {
-      yield* _mapSubductionEventToState(event);
+      yield* _mapSubductionEventToState();
     }
   }
 
